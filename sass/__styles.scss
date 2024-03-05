@@ -1,0 +1,19 @@
+@use "__variables" as *;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: black url("../assets/background-large.jpg") no-repeat fixed center;
+    background-size: contain;
+}
+
+h1 {
+    color: $primary-dark;
+    text-transform: uppercase;
+    font-family: $ff-display;
+    font-size: 7rem;
+}

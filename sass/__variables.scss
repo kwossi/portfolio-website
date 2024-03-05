@@ -1,0 +1,34 @@
+// Colors
+
+$primary-light: #B2D8D8;
+$primary-medium: #7ABABA;
+$primary-dark: #008080;
+$primary-li-t1: rgba(178, 216, 216,.7);
+$primary-li-t2: rgba(178, 216, 216,.5);
+$primary-li-t3: rgba(178, 216, 216,.3);
+$primary-med-t1: rgba(122, 186, 186, .7);
+$primary-med-t2: rgba(122, 186, 186, .5);
+$primary-med-t3: rgba(122, 186, 186, .3);
+$primary-dk-t1: rgba(0, 128, 128, .7);
+$primary-dk-t2: rgba(0, 128, 128, .5);
+$primary-dk-t3: rgba(0, 128, 128, .3);
+
+$secondary-light: #797a7a;
+$secondary-medium: #585b5d;
+$secondary-dark: #383e42;
+$secondary-xtra-light: #f2f2f2;
+
+// Font + text
+$ff-display: sans-serif;
+$ff-text: sans-serif;
+
+$border: 3px solid $primary-dark;
+$border-radius: 7px;
+
+
+$main-max-width: 1500px;
+
+%background {
+    background: black url("../assets/background-large.jpg") no-repeat fixed center;
+    background-size: contain;
+}

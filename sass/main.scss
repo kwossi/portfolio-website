@@ -1,0 +1,111 @@
+@use "__variables" as *;
+@use "__contact" as *;
+@use "__styles" as *;
+
+
+.hero {
+    max-width: $main-max-width;
+    margin: 7.5% auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hero-text {
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    p {
+        color: $primary-medium;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-family: $ff-text;
+    }
+    .socials {
+        display: flex;
+        list-style: none;
+        margin-top: 1rem;
+        li a {
+            color: $primary-light;
+            margin-left: 25px;
+            font-size: 2.5rem;
+            transition: transform 0.3s ease;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.hero-img {
+    height: 60vh;
+    width: 60vh;
+    border-radius: 50%;
+    position: relative;
+    .circle {
+        height: 60vh;
+        width: 60vh;
+        border-radius: 50%;
+        background-color: $primary-med-t2;
+        position: absolute;
+    }
+    .c1 {
+        top: -7.5vh;
+    }
+    .c2 {
+        top: -15vh;
+    }
+    .c3 {
+        top: -22.5vh;
+    }
+    .c4 {
+        top: -30vh;
+    }
+    img {
+        object-fit: cover;
+        border: $border;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: scaleX(-1); 
+    }
+}
+
+nav {
+    position: sticky;
+    bottom: 0;
+    max-width: $main-max-width;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        a {
+            width: 80%;
+            margin: auto;
+        }
+    }
+    a {
+        background-color: $primary-li-t2;
+        color: $secondary-xtra-light;
+        text-transform: uppercase;
+        font-family: $ff-text;
+        font-size: 2rem;
+        text-decoration: none;
+        border: $border;
+        border-radius: $border-radius;
+        flex-grow: 1;
+        text-align: center;
+        margin: 1rem;
+        padding: 1rem;
+        transition: letter-spacing 300ms ease-in;
+        &:hover {
+            letter-spacing: 5px;
+            color: $secondary-medium;
+            background-color: $primary-light;
+        }
+    }
+}
