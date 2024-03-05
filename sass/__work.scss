@@ -1,0 +1,66 @@
+@use "__variables" as *;
+@use "__styles" as *;
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    grid-template-areas: 
+        "work1 image1 image1"
+        "work1 highlight work2"
+        "image2 image2 work2";
+}
+
+.work1 {
+    grid-area: work1;
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+.work2 {
+    grid-area: work2;
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+.highlight {
+    grid-area: highlight;
+    background-color: $primary-light;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: $border-radius;
+    h3 {
+        color: $primary-dark;
+    }
+}
+
+.image-large {
+    width: auto;
+    min-height: 100%;
+    max-height: 25vh;
+    background-color: red;
+    grid-column: span 2;
+    border-radius: $border-radius;
+    overflow: hidden;
+    display: flex;
+    .image1 {
+        grid-area: image1;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .image2 {
+        grid-area: image2;
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+    }
+}
+
+
+

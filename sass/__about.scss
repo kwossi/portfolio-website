@@ -1,0 +1,47 @@
+@use "__variables" as *;
+@use "__styles" as *;
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    grid-template-areas: 
+        "about1 img1 about2"
+        "about1 img2 about2"
+        "about1 img3 about2";
+}
+
+.about1 {
+    grid-area: about1;
+}
+
+.about2 {
+    grid-area: about2;
+}
+
+.image {
+    display: flex;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 25vh;
+    border-radius: $border-radius;
+    border: $border;
+    overflow: hidden;
+    position: relative;
+    img {
+        width: 100%; 
+        max-height: 100%; 
+        object-fit: cover;
+    }
+    .img1 {
+        grid-area: img1;
+    }
+    .img2 {
+        grid-area: img2;
+    }
+    .img3 {
+        grid-area: img3;
+    }
+}
+

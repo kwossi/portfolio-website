@@ -6,7 +6,7 @@
 
 body {
   background: black url("../assets/background-large.jpg") no-repeat fixed center;
-  background-size: contain;
+  background-size: cover;
 }
 
 h1 {
@@ -14,11 +14,160 @@ h1 {
   text-transform: uppercase;
   font-family: sans-serif;
   font-size: 7rem;
+  text-align: end;
+}
+h1 .mirror {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+h3 {
+  color: #7ABABA;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+main {
+  max-width: 1500px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: rgba(178, 216, 216, 0.3);
+  border-radius: 7px;
+}
+.card p {
+  color: #B2D8D8;
+}
+
+.tile {
+  padding: 1rem;
+  flex: 1;
+}
+.tile h3 {
+  margin-bottom: 1rem;
+}
+.tile p {
+  font-size: 1.8rem;
+  text-align: left;
+}
+.tile:hover {
+  background-color: #B2D8D8;
+}
+.tile:hover h3 {
+  color: #008080;
+}
+.tile:hover p {
+  color: #383e42;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  grid-template-areas: "work1 image1 image1" "work1 highlight work2" "image2 image2 work2";
+}
+
+.work1 {
+  grid-area: work1;
+}
+.work1 p {
+  margin-bottom: 1rem;
+}
+
+.work2 {
+  grid-area: work2;
+}
+.work2 p {
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  grid-area: highlight;
+  background-color: #B2D8D8;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 7px;
+}
+.highlight h3 {
+  color: #008080;
+}
+
+.image-large {
+  width: auto;
+  min-height: 100%;
+  max-height: 25vh;
+  background-color: red;
+  grid-column: span 2;
+  border-radius: 7px;
+  overflow: hidden;
+  display: flex;
+}
+.image-large .image1 {
+  grid-area: image1;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.image-large .image2 {
+  grid-area: image2;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  grid-template-areas: "about1 img1 about2" "about1 img2 about2" "about1 img3 about2";
+}
+
+.about1 {
+  grid-area: about1;
+}
+
+.about2 {
+  grid-area: about2;
+}
+
+.image {
+  display: flex;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 25vh;
+  border-radius: 7px;
+  border: 3px solid #008080;
+  overflow: hidden;
+  position: relative;
+}
+.image img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.image .img1 {
+  grid-area: img1;
+}
+.image .img2 {
+  grid-area: img2;
+}
+.image .img3 {
+  grid-area: img3;
 }
 
 .hero {
   max-width: 1500px;
-  margin: 7.5% auto;
+  margin: 7% auto;
   display: flex;
   justify-content: space-evenly;
 }
@@ -38,17 +187,19 @@ h1 {
 }
 .hero-text .socials {
   display: flex;
+  flex-direction: row-reverse;
+  width: 2rem;
   list-style: none;
   margin-top: 1rem;
 }
 .hero-text .socials li a {
+  flex: 1;
   color: #B2D8D8;
   margin-left: 25px;
   font-size: 2.5rem;
-  transition: transform 0.3s ease;
 }
 .hero-text .socials li a:hover {
-  transform: scale(1.2);
+  font-size: 2.8rem;
 }
 
 .hero-img {
@@ -90,6 +241,7 @@ nav {
   position: sticky;
   bottom: 0;
   max-width: 1500px;
+  width: 100%;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
@@ -113,14 +265,14 @@ nav a {
   text-decoration: none;
   border: 3px solid #008080;
   border-radius: 7px;
-  flex-grow: 1;
+  flex: 1;
   text-align: center;
   margin: 1rem;
   padding: 1rem;
   transition: letter-spacing 300ms ease-in;
 }
 nav a:hover {
-  letter-spacing: 5px;
+  letter-spacing: 10px;
   color: #585b5d;
   background-color: #B2D8D8;
 }
