@@ -10,7 +10,8 @@
         "about1 img1 about2"
         "about1 img2 about2"
         "about1 img3 about2";
-}
+    }
+
 
 .about1 {
     grid-area: about1;
@@ -21,12 +22,10 @@
 }
 
 .image {
-    display: flex;
     max-width: 100%;
     min-height: 100%;
     max-height: 25vh;
     border-radius: $border-radius;
-    border: $border;
     overflow: hidden;
     position: relative;
     img {
@@ -45,3 +44,30 @@
     }
 }
 
+
+
+@media screen and (max-width:768px) {
+    h1 {
+        text-align: center;
+    }
+    .about-grid {
+        display: flex;
+        flex-direction: column;
+        &>:nth-child(1) {
+            order: 2;
+        }
+        &>:nth-child(2) {
+            order: 4;
+        }
+        &>:nth-child(3) {
+            order: 1;
+        }
+        &>:nth-child(4) {
+            order: 3;
+        }
+        &>:nth-child(5) {
+            order: 5;
+        }
+    }
+    }
+    
