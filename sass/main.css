@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
@@ -10,10 +10,14 @@ body {
   background-size: cover;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
 h1 {
   color: #008080;
   text-transform: uppercase;
-  font-family: sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 7rem;
   text-align: end;
 }
@@ -23,7 +27,7 @@ h1 .mirror {
 }
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
@@ -60,7 +64,7 @@ main {
   margin-bottom: 1rem;
 }
 .tile p {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   text-align: left;
 }
 .tile:hover {
@@ -83,17 +87,18 @@ main {
   display: inline-block;
   background-color: rgba(178, 216, 216, 0.3);
   color: #B2D8D8;
-  margin-top: 3rem;
+  margin-top: 5rem;
   text-align: center;
   text-decoration: none;
   border-radius: 7px;
-  width: 8rem;
+  border: 3px solid #008080;
+  width: 20%;
+  min-width: 4rem;
   padding: 0.5rem 0;
   transition: all 300ms ease-in;
 }
 .back:hover {
   letter-spacing: 10px;
-  font-weight: 800;
 }
 
 .filter {
@@ -234,6 +239,14 @@ main {
   color: #008080;
 }
 
+.sm-icon {
+  color: #008080;
+  font-size: 2.5rem;
+}
+.sm-icon:hover {
+  transform: scale(1.2, 1.2);
+}
+
 .image-large {
   width: auto;
   max-width: 100%;
@@ -275,7 +288,7 @@ main {
     order: 5;
   }
   .work-grid > :nth-child(5) {
-    display: none;
+    order: 6;
   }
 }
 .about-grid {
@@ -304,7 +317,7 @@ main {
 }
 .image img {
   width: 100%;
-  max-height: 100%;
+  min-height: 100%;
   object-fit: cover;
 }
 .image .img1 {
@@ -359,23 +372,22 @@ main {
   color: #7ABABA;
   text-transform: uppercase;
   font-size: 2rem;
-  font-family: sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 .hero-text .socials {
   display: flex;
-  flex-direction: row-reverse;
-  width: 2rem;
   list-style: none;
   margin-top: 1rem;
 }
 .hero-text .socials li a {
   flex: 1;
+  margin-left: 25px;
   color: #B2D8D8;
   margin-left: 25px;
   font-size: 2.5rem;
 }
 .hero-text .socials li a:hover {
-  font-size: 2.8rem;
+  color: #008080;
 }
 
 .hero-img {
@@ -437,7 +449,7 @@ nav a {
   background-color: rgba(178, 216, 216, 0.5);
   color: #f2f2f2;
   text-transform: uppercase;
-  font-family: sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 2rem;
   text-decoration: none;
   border: 3px solid #008080;
@@ -445,13 +457,12 @@ nav a {
   flex: 1;
   text-align: center;
   margin: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
   transition: letter-spacing 300ms ease-in;
 }
 @media screen and (max-width: 768px) {
   nav a {
     font-size: 1.6rem;
-    padding: 0.7rem;
     margin: 0.2rem;
   }
 }
@@ -475,15 +486,14 @@ nav a:hover {
     left: 50%;
     transform: translateX(-50%);
   }
-  .hero .hero-text h1 {
-    color: #383e42;
-  }
   .hero .hero-text p {
-    color: #585b5d;
+    color: #008080;
   }
   .hero .hero-text li a {
-    color: #797a7a;
-    margin: auto;
+    color: #008080;
+  }
+  .hero .hero-text li a:hover {
+    color: #B2D8D8;
   }
   .hero .hero-img {
     position: absolute;
