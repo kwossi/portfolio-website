@@ -38,7 +38,7 @@ h3 {
 }
 
 main {
-  max-width: 1500px;
+  max-width: 1800px;
   margin: auto;
   padding: 2rem;
 }
@@ -104,10 +104,11 @@ main {
 }
 
 .filter {
-  background-color: rgba(122, 186, 186, 0.5);
+  background-color: rgba(0, 128, 128, 0.5);
   height: 100%;
   width: 100%;
   position: absolute;
+  z-index: 100;
 }
 
 @media screen and (max-width: 900px) {
@@ -259,6 +260,24 @@ main {
   transform: scale(1.2, 1.2);
 }
 
+.image-top {
+  background-image: url("../assets/zebras1-sm.jpeg");
+  background-size: cover;
+  background-position: 75% 50%;
+  width: 100%;
+  height: 100%;
+  min-height: 25vh;
+}
+
+.image-bottom {
+  background-image: url("../assets/zebras2-sm.jpeg");
+  background-size: cover;
+  background-position: 75% 70%;
+  width: 100%;
+  height: 100%;
+  min-height: 25vh;
+}
+
 .image-large {
   width: auto;
   max-width: 100%;
@@ -268,18 +287,6 @@ main {
   border-radius: 7px;
   overflow: hidden;
   position: relative;
-}
-.image-large .image1 {
-  grid-area: image1;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-.image-large .image2 {
-  grid-area: image2;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
@@ -319,7 +326,7 @@ main {
   grid-area: about2;
 }
 
-.image {
+.image-wrap {
   max-width: 100%;
   min-height: 100%;
   max-height: 25vh;
@@ -327,19 +334,38 @@ main {
   overflow: hidden;
   position: relative;
 }
-.image img {
+.image-wrap img {
   width: 100%;
   min-height: 100%;
   object-fit: cover;
 }
-.image .img1 {
-  grid-area: img1;
+
+.img1 {
+  background-image: url("../assets/elephant1-sm.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  min-height: 25vh;
 }
-.image .img2 {
-  grid-area: img2;
+
+.img2 {
+  background-image: url("../assets/elephant2-sm.jpeg");
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+  min-height: 25vh;
 }
-.image .img3 {
-  grid-area: img3;
+
+.img3 {
+  background-image: url("../assets/elephant3-sm.jpeg");
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+  min-height: 25vh;
+  transform: scaleX(-1);
 }
 
 @media screen and (max-width: 768px) {
@@ -367,7 +393,7 @@ main {
   }
 }
 .hero {
-  max-width: 1500px;
+  max-width: 1800px;
   margin: 7% auto;
   display: flex;
   justify-content: space-evenly;
@@ -379,6 +405,7 @@ main {
   flex-direction: column;
   align-items: flex-end;
   gap: 20px;
+  max-width: 50%;
 }
 .hero-text p {
   color: #7ABABA;
@@ -440,7 +467,7 @@ main {
 nav {
   position: sticky;
   bottom: 0;
-  max-width: 1500px;
+  max-width: 1800px;
   width: 100%;
   margin: auto;
   display: flex;
@@ -497,15 +524,20 @@ nav a:hover {
     align-items: center;
     left: 50%;
     transform: translateX(-50%);
+    max-width: 100%;
   }
   .hero .hero-text p {
     color: #008080;
+    background-color: rgba(178, 216, 216, 0.7);
+    border-radius: 7px;
   }
   .hero .hero-text li a {
     color: #008080;
   }
   .hero .hero-text li a:hover {
     color: #B2D8D8;
+    background-color: #008080;
+    border-radius: 7px;
   }
   .hero .hero-img {
     position: absolute;

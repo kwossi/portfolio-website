@@ -48,6 +48,27 @@
     }
 }
 
+
+
+.image-top {
+    background-image: url("../assets/zebras1-sm.jpeg");
+    background-size: cover;
+    background-position: 75% 50%;
+    width: 100%;
+    height: 100%;
+    min-height: 25vh;
+}
+
+.image-bottom {
+    background-image: url("../assets/zebras2-sm.jpeg");
+    background-size: cover;
+    background-position: 75% 70%;
+    width: 100%;
+    height: 100%;
+    min-height: 25vh;
+}
+
+
 .image-large {
     width: auto;
     max-width: 100%;
@@ -57,18 +78,6 @@
     border-radius: $border-radius;
     overflow: hidden;
     position: relative;
-    .image1 {
-        grid-area: image1;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    .image2 {
-        grid-area: image2;
-        width: 100%;
-        height: auto;
-        object-fit: cover; 
-    }
 }
 
 
