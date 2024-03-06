@@ -42,7 +42,7 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 1rem;
   background-color: rgba(178, 216, 216, 0.3);
   border-radius: 7px;
@@ -73,6 +73,29 @@ main {
   color: #383e42;
 }
 
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.back {
+  display: inline-block;
+  background-color: rgba(178, 216, 216, 0.3);
+  color: #B2D8D8;
+  margin-top: 3rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 7px;
+  width: 8rem;
+  padding: 0.5rem 0;
+  transition: all 300ms ease-in;
+}
+.back:hover {
+  letter-spacing: 10px;
+  font-weight: 800;
+}
+
 .filter {
   background-color: rgba(178, 216, 216, 0.5);
   height: 100%;
@@ -89,19 +112,93 @@ main {
   }
 }
 .wrapper {
-  width: 60%;
   border-radius: 7px;
   margin: auto;
   display: flex;
-  flex-direction: column;
-  background-color: rgba(178, 216, 216, 0.3);
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   padding: 2rem;
 }
-.wrapper textarea {
-  width: 75%;
+
+.address {
+  width: 50%;
 }
 
+.details {
+  width: 50%;
+  margin: auto;
+}
+.details p {
+  font-size: 1.4rem;
+}
+
+.form-wrapper {
+  width: 60%;
+  background-color: rgba(178, 216, 216, 0.3);
+  border-radius: 7px;
+  padding: 1rem 0;
+}
+.form-wrapper h3 {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.form-wrapper form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.form-wrapper form .btns {
+  display: flex;
+  justify-content: flex-end;
+}
+.form-wrapper form .btns button {
+  width: 30%;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-radius: 7px;
+  color: #B2D8D8;
+  background-color: #008080;
+  border: 3px solid #008080;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  transition: letter-spacing 300ms ease-in;
+}
+.form-wrapper form .btns button:hover {
+  letter-spacing: 10px;
+}
+.form-wrapper input {
+  width: 50%;
+}
+.form-wrapper textarea, .form-wrapper input {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin: 0.7rem 0;
+}
+.form-wrapper textarea::placeholder, .form-wrapper input::placeholder {
+  font-style: italic;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .address {
+    width: 100%;
+  }
+  .details {
+    width: 70%;
+    font-size: 1rem;
+  }
+  .form-wrapper {
+    width: 95%;
+    margin-top: 3rem;
+  }
+  .form-wrapper input {
+    width: 100%;
+  }
+}
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -377,6 +474,9 @@ nav a:hover {
     align-items: center;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .hero .hero-text h1 {
+    color: #383e42;
   }
   .hero .hero-text p {
     color: #585b5d;
