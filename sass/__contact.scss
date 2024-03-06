@@ -20,6 +20,10 @@
     p {
         font-size: 1.4rem;;
     }
+    .right {
+        margin-top: 1rem;
+        text-align: center;
+    }
 }
 
 .form-wrapper {
@@ -33,6 +37,7 @@
         margin-bottom: 2rem;
     }
     form {
+        box-sizing: border-box;
         width: 80%;
         display: flex;
         flex-direction: column;
@@ -62,11 +67,17 @@
         width: 50%;
     }
     textarea, input {
+        // box-sizing: border-box;
+        border-radius: $border-radius;
         padding: .5rem;   
         font-size: 1.2rem;
         margin: .7rem 0;
         &::placeholder {
             font-style: italic;
+        }
+        &:focus {
+            outline: none;
+            border: 3px solid $primary-dark;
         }
     }  
     
