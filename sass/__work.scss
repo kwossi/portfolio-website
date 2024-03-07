@@ -1,5 +1,6 @@
 @use "__variables" as *;
 @use "__styles" as *;
+@use "__animations" as *;
 
 .work-grid {
     display: grid;
@@ -51,9 +52,10 @@
 
 
 .image-top {
-    background-image: url("../assets/zebras1-sm.jpeg");
+    background-image: url("../assets/zebras-top-sm.jpeg");
     background-size: cover;
-    background-position: 75% 50%;
+    background-position: bottom;
+    // background-position: 75% 50%;
     width: 100%;
     height: 100%;
     min-height: 25vh;

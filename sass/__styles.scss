@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    color: $primary-dark;
+    color: $primary-xtra-dark;
     text-transform: uppercase;
     font-family: $ff-display;
     font-size: 7rem;
@@ -29,9 +29,12 @@ h1 {
     @media screen and (max-width:768px) {
         font-size: 4rem;
     }
+    @media screen and (max-width:1200px) and (min-width:1000px) {
+        font-size: 5rem;
+    }
 }
 h3 {
-    color: $primary-medium;
+    color: $primary-dark;
     text-transform: uppercase;
     font-size: 2rem;
 }
@@ -50,7 +53,7 @@ main {
     background-color: $primary-li-t3;
     border-radius: $border-radius;
     p {
-        color: $primary-light;
+        color: $primary-xtra-light;
     }
 } 
 
@@ -66,12 +69,12 @@ main {
         text-align: left;
     }
     &:hover {
-        background-color: $primary-light;
+        background-color: $primary-xtra-light;
         h3 {
             color: $primary-dark;        
         }
         p {
-            color: $secondary-dark;
+            color: $secondary-xtra-dark;
         }
     }
 }
@@ -84,8 +87,8 @@ main {
 
 .back {
     display: inline-block;
-    background-color: $primary-li-t3;
-    color: $primary-light;
+    background-color: $primary-xl-t3;
+    color: $primary-xtra-light;
     margin-top: 5rem;
     text-align: center;
     text-decoration: none;
@@ -97,13 +100,13 @@ main {
     transition: all 300ms ease-in;
     &:hover {
         letter-spacing: 10px;
-        background-color: $primary-light;
-        color: $secondary-dark;
+        background-color: $primary-xtra-light;
+        color: $secondary-xtra-dark;
     } 
 }
 
 .filter {
-    background-color: $primary-dk-t2;
+    background-color: $primary-dk-t3;
     height: 100%;
     width: 100%;
     position: absolute;

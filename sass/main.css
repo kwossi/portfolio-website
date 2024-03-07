@@ -1,3 +1,84 @@
+.circle {
+  animation: dropElement ease-in-out 800ms forwards;
+  opacity: 0;
+}
+
+.hero-img img {
+  animation: dropPulse ease-in-out 1600ms forwards;
+  opacity: 0;
+  animation-delay: 1000ms;
+}
+
+.c3 {
+  animation-delay: 200ms;
+}
+
+.c2 {
+  animation-delay: 400ms;
+}
+
+.c1 {
+  animation-delay: 600ms;
+}
+
+@keyframes dropElement {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes dropPulse {
+  0% {
+    transform: translateY(-200%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+    border: 50px solid #008080;
+  }
+  100% {
+    opacity: 1;
+    border: 3px solid #008080;
+  }
+}
+.flip {
+  animation: flipChar ease 1000ms;
+}
+
+@keyframes flipChar {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-1);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.flip:nth-of-type(2) {
+  animation-delay: 1000ms;
+}
+
+.flip:nth-of-type(3) {
+  animation-delay: 2000ms;
+}
+
+.flip:nth-of-type(4) {
+  animation-delay: 3000ms;
+}
+
+.flip:nth-of-type(5) {
+  animation-delay: 4000ms;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  color: #008080;
+  color: rgb(0, 84, 85);
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
   font-size: 7rem;
@@ -30,9 +111,14 @@ h1 .mirror {
     font-size: 4rem;
   }
 }
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
 
 h3 {
-  color: #7ABABA;
+  color: #008080;
   text-transform: uppercase;
   font-size: 2rem;
 }
@@ -52,7 +138,7 @@ main {
   border-radius: 7px;
 }
 .card p {
-  color: #B2D8D8;
+  color: rgb(235, 243, 243);
 }
 
 .tile {
@@ -68,13 +154,13 @@ main {
   text-align: left;
 }
 .tile:hover {
-  background-color: #B2D8D8;
+  background-color: rgb(235, 243, 243);
 }
 .tile:hover h3 {
   color: #008080;
 }
 .tile:hover p {
-  color: #383e42;
+  color: #1f2528;
 }
 
 .footer {
@@ -85,8 +171,8 @@ main {
 
 .back {
   display: inline-block;
-  background-color: rgba(178, 216, 216, 0.3);
-  color: #B2D8D8;
+  background-color: rgba(235, 243, 243, 0.3);
+  color: rgb(235, 243, 243);
   margin-top: 5rem;
   text-align: center;
   text-decoration: none;
@@ -99,12 +185,12 @@ main {
 }
 .back:hover {
   letter-spacing: 10px;
-  background-color: #B2D8D8;
-  color: #383e42;
+  background-color: rgb(235, 243, 243);
+  color: #1f2528;
 }
 
 .filter {
-  background-color: rgba(0, 128, 128, 0.5);
+  background-color: rgba(0, 128, 128, 0.3);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -121,6 +207,7 @@ main {
 }
 .wrapper {
   border-radius: 7px;
+  max-width: 1800px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -171,7 +258,7 @@ main {
   font-size: 1.4rem;
   text-transform: uppercase;
   border-radius: 7px;
-  color: #B2D8D8;
+  color: rgb(178, 216, 216);
   background-color: #008080;
   border: 3px solid #008080;
   margin: 0.5rem 0;
@@ -241,7 +328,7 @@ main {
 
 .highlight {
   grid-area: highlight;
-  background-color: #B2D8D8;
+  background-color: rgb(178, 216, 216);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -261,9 +348,9 @@ main {
 }
 
 .image-top {
-  background-image: url("../assets/zebras1-sm.jpeg");
+  background-image: url("../assets/zebras-top-sm.jpeg");
   background-size: cover;
-  background-position: 75% 50%;
+  background-position: bottom;
   width: 100%;
   height: 100%;
   min-height: 25vh;
@@ -341,12 +428,13 @@ main {
 }
 
 .img1 {
-  background-image: url("../assets/elephant1-sm.jpeg");
+  background-image: url("../assets/elephant3-sm.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position: 50%;
   width: 100%;
   height: 100%;
   min-height: 25vh;
+  transform: scaleX(-1);
 }
 
 .img2 {
@@ -359,13 +447,12 @@ main {
 }
 
 .img3 {
-  background-image: url("../assets/elephant3-sm.jpeg");
+  background-image: url("../assets/elephant1-sm.jpeg");
   background-size: cover;
-  background-position: 50%;
+  background-position: center;
   width: 100%;
   height: 100%;
   min-height: 25vh;
-  transform: scaleX(-1);
 }
 
 @media screen and (max-width: 768px) {
@@ -421,7 +508,7 @@ main {
 .hero-text .socials li a {
   flex: 1;
   margin-left: 25px;
-  color: #B2D8D8;
+  color: rgb(178, 216, 216);
   margin-left: 25px;
   font-size: 2.5rem;
 }
@@ -461,7 +548,6 @@ main {
   width: 100%;
   height: 100%;
   position: absolute;
-  transform: scaleX(-1);
 }
 
 nav {
@@ -485,7 +571,7 @@ nav {
   }
 }
 nav a {
-  background-color: rgba(178, 216, 216, 0.5);
+  background-color: rgba(235, 243, 243, 0.3);
   color: #f2f2f2;
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
@@ -508,7 +594,7 @@ nav a {
 nav a:hover {
   letter-spacing: 10px;
   color: #585b5d;
-  background-color: #B2D8D8;
+  background-color: rgb(235, 243, 243);
 }
 
 @media screen and (max-width: 1000px) {
@@ -535,7 +621,7 @@ nav a:hover {
     color: #008080;
   }
   .hero .hero-text li a:hover {
-    color: #B2D8D8;
+    color: rgb(178, 216, 216);
     background-color: #008080;
     border-radius: 7px;
   }

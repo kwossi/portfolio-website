@@ -1,8 +1,14 @@
 // Colors
 
-$primary-light: #B2D8D8;
+//  -> TEAL 1
+$primary-xtra-light: rgb(235, 243, 243);
+$primary-light: rgb(178, 216, 216);
 $primary-medium: #7ABABA;
 $primary-dark: #008080;
+$primary-xtra-dark: rgb(0, 84, 85);
+$primary-xl-t1: rgba(235, 243, 243, .7);
+$primary-xl-t2: rgba(235, 243, 243, .5);
+$primary-xl-t3: rgba(235, 243, 243, .3);
 $primary-li-t1: rgba(178, 216, 216,.7);
 $primary-li-t2: rgba(178, 216, 216,.5);
 $primary-li-t3: rgba(178, 216, 216,.3);
@@ -12,11 +18,40 @@ $primary-med-t3: rgba(122, 186, 186, .3);
 $primary-dk-t1: rgba(0, 128, 128, .7);
 $primary-dk-t2: rgba(0, 128, 128, .5);
 $primary-dk-t3: rgba(0, 128, 128, .3);
+$primary-xd-t1: rgba(0, 84, 85, .3);
+$primary-xd-t2: rgba(0, 84, 85, .5);
+$primary-xd-t3: rgba(0, 84, 85, .3);
 
+
+//  PURPLE
+// $primary-xtra-light: rgb(238, 219, 253);
+// $primary-light: rgb(221, 186, 251);
+// $primary-medium: rgb(199, 147, 247);
+// $primary-dark: rgb(137, 50, 236);
+// $primary-xtra-dark: rgb(110, 13, 184);
+// $primary-xl-t1: rgba(238, 219, 253, .7);
+// $primary-xl-t2: rgba(238, 219, 253, .5);
+// $primary-xl-t3: rgba(238, 219, 253, .3);
+// $primary-li-t1: rgba(221, 186, 251,.7);
+// $primary-li-t2: rgba(221, 186, 251,.5);
+// $primary-li-t3: rgba(221, 186, 251,.3);
+// $primary-med-t1: rgba(199, 147, 247, .7);
+// $primary-med-t2: rgba(199, 147, 247, .5);
+// $primary-med-t3: rgba(199, 147, 247, .3);
+// $primary-dk-t1: rgba(137, 50, 236, .7);
+// $primary-dk-t2: rgba(137, 50, 236, .5);
+// $primary-dk-t3: rgba(137, 50, 236, .3);
+// $primary-xd-t1: rgba(93, 13, 184, .3);
+// $primary-xd-t2: rgba(93, 13, 184, .5);
+// $primary-xd-t3: rgba(93, 13, 184, .3);
+
+
+// SECONDARY DARK GREY
 $secondary-xtra-light: #f2f2f2;
 $secondary-light: #797a7a;
 $secondary-medium: #585b5d;
 $secondary-dark: #383e42;
+$secondary-xtra-dark: #1f2528;
 
 
 // Font + text

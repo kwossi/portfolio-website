@@ -2,10 +2,11 @@
 @use "__styles" as *;
 
 
+
 .wrapper {
     border-radius: $border-radius;
+    max-width: $main-max-width;
     margin: auto;
-    // background-color: $primary-li-t3;
     display: flex;
     justify-content: space-between;
     align-items: center;
