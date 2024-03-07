@@ -98,6 +98,11 @@ main {
   margin: auto;
   padding: 2rem;
 }
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0.5rem;
+  }
+}
 
 .card {
   display: flex;
@@ -259,7 +264,7 @@ main {
   box-shadow: 0 0 0 2px #008080;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) and (min-width: 769px) {
   .wrapper {
     flex-direction: column;
   }
@@ -272,6 +277,26 @@ main {
   }
   .form-wrapper {
     width: 95%;
+    margin-top: 3rem;
+  }
+  .form-wrapper input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 0;
+  }
+  .address {
+    width: 100%;
+  }
+  .details {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .form-wrapper {
+    width: 100%;
     margin-top: 3rem;
   }
   .form-wrapper input {

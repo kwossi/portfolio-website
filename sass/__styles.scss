@@ -43,6 +43,9 @@ main {
     max-width: $main-max-width;
     margin: auto;
     padding: 2rem;
+    @media screen and (max-width: 768px) {
+        padding: .5rem;
+    }
 }
 
 .card {
