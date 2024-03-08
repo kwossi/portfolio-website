@@ -58,11 +58,9 @@
                 border: $border;
                 margin: .5rem 0;
                 padding: .5rem 0;
-                transition: all 300ms ease-in;
+                transition: letter-spacing 300ms ease-in;
                 &:hover {
                     letter-spacing: 10px;
-                    color: $secondary-xtra-dark;
-                    background-color: §primary-light;
                 }
             }
         }
